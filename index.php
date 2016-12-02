@@ -29,10 +29,12 @@
 </div>
 
 <div class="over-avs">
-    <h1>Over AvS Energy Serivce</h1>
-    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-        Alias assumenda delectus dicta dolor dolores explicabo id ipsum iure laudantium molestias mollitia necessitatibus non,
-        numquam obcaecati quaerat saepe sint sunt tempore?</p>
+        <?php if ( is_active_sidebar( 'sidebar-1' )  ) : ?>
+            <aside id="secondary" class="sidebar widget-area" role="complementary">
+                <?php dynamic_sidebar( 'sidebar-1' ); ?>
+            </aside><!-- .sidebar .widget-area -->
+        <?php endif; ?>
+</div>
 </div>
 
 <?php get_footer() ?>

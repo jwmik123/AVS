@@ -32,3 +32,37 @@ array(
 );
 }
 add_action( 'init', 'register_my_menus' );
+
+
+function avs_theme_widgets_init() {
+    register_sidebar( array(
+        'name'          => __( 'Sidebar', 'avs_theme' ),
+        'id'            => 'sidebar-1',
+        'description'   => __( 'Add widgets here to appear in your sidebar.', 'avs_theme' ),
+        'before_widget' => '<section id="%1$s" class="widget %2$s">',
+        'after_widget'  => '</section>',
+        'before_title'  => '<h2 class="widget-title">',
+        'after_title'   => '</h2>',
+    ) );
+
+    register_sidebar( array(
+        'name'          => __( 'Content Bottom 1', 'avs_theme' ),
+        'id'            => 'sidebar-2',
+        'description'   => __( 'Appears at the bottom of the content on posts and pages.', 'avs_theme' ),
+        'before_widget' => '<section id="%1$s" class="widget %2$s">',
+        'after_widget'  => '</section>',
+        'before_title'  => '<h2 class="widget-title">',
+        'after_title'   => '</h2>',
+    ) );
+
+    register_sidebar( array(
+        'name'          => __( 'Content Bottom 2', 'avs_theme' ),
+        'id'            => 'sidebar-3',
+        'description'   => __( 'Appears at the bottom of the content on posts and pages.', 'avs_theme' ),
+        'before_widget' => '<section id="%1$s" class="widget %2$s">',
+        'after_widget'  => '</section>',
+        'before_title'  => '<h2 class="widget-title">',
+        'after_title'   => '</h2>',
+    ) );
+}
+add_action( 'widgets_init', 'avs_theme_widgets_init' );
