@@ -66,3 +66,4 @@ function avs_theme_widgets_init() {
     ) );
 }
 add_action( 'widgets_init', 'avs_theme_widgets_init' );
+

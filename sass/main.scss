@@ -12,12 +12,16 @@
 //This theme, like WordPress, is licensed under the GPL.
 //Use it to make something cool, have fun, and share what you've learned with others.
 
+@import '../bootstrap/assets/stylesheets/_bootstrap.scss';
 @import '_navigation.scss';
+@import '_widget-area.scss';
+@import '_slider.scss';
+@import '_posts.scss';
 
 html, body {
   margin: 0;
   padding: 0;
-  background-color: blue;
+  background-color: white;
   font-family: sans-serif;
 }
 
